@@ -4,9 +4,19 @@
 
 :root {
   color-scheme: light dark;
+  --color-primary: #4E3B31;   /* Ironbark */
+  --color-accent: #8FAE82;    /* Gumleaf */
+  --color-bg: #DAD2C5;        /* Dusty Beige */
+  --color-muted: #99a4ad;     /* Sky Grey */
+  --color-text: #1C1C1C;      /* Charcoal */
 }
 .dark {
   color-scheme: dark;
+  --color-primary: #DAD2C5;
+  --color-accent: #8FAE82;
+  --color-bg: #1C1C1C;
+  --color-muted: #4E3B31;
+  --color-text: #F1F1F1;
 }
 .light {
   color-scheme: light;
@@ -24,13 +34,18 @@
 }
 
 @theme {
-  --color-bg: var(--color-neutral-50);
-  --color-link: oklch(46.97% 0.2734 267.56);
-  --color-muted-text: var(--color-neutral-700);
+  --color-bg: var(--color-bg);                     /* Dusty Beige */
+  --color-link: var(--color-primary);               /* Gumleaf Green */
+  --color-muted-text: var(--color-primary);        /* Ironbark Brown */
+  --color-dark-bg: var(--color-bg);                /* Charcoal Black (via .dark override) */
+  --color-dark-link: var(--color-accent);          /* Gumleaf Green (shared) */
+  --color-dark-muted-text: var(--color-muted);     /* Ironbark in dark */
 
-  --color-dark-bg: var(--color-neutral-950);
-  --color-dark-link: oklch(73.9% 0.1387 282.47);
-  --color-dark-muted-text: var(--color-neutral-300);
+  --color-gumleaf: var(--color-accent);
+  --color-ironbark: var(--color-primary);
+  --color-dusty: var(--color-bg);
+  --color-skygrey: var(--color-muted);
+  --color-charcoal: var(--color-text)
 }
 
 /* ensure .link and typography.css are consistent */
@@ -44,9 +59,9 @@
   text-underline-offset: 3px;
   text-decoration-color: var(--prose-link-underline-color);
   text-decoration-thickness: 1px;
-  & code {
-    font-weight: var(--font-weight-semibold);
-  }
+}
+.link code {
+  font-weight: var(--font-weight-semibold);
 }
 
 .dark .link {

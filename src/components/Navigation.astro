@@ -1,16 +1,16 @@
 ---
-import { NAV_LINKS, SITE } from "@/siteConfig.ts";
+import ThemeToggle from "./ThemeToggle.astro";
 ---
 
 <header
-  class="mx-auto flex max-w-screen-sm flex-wrap items-center justify-between p-3 pb-8 font-sans sm:p-6"
+  class="mx-auto mb-8 flex max-w-screen-sm flex-wrap items-end justify-between p-3 pb-8 font-sans sm:p-6"
 >
-  <a
-    href="/"
-    class="text-lg font-semibold text-black sm:text-xl dark:text-white"
-    >{SITE.title}</a
-  >
-  <nav>
+  <a href="/" class="text-lg font-black sm:text-xl">
+    <span class="text-gumleaf dark:text-gumleaf"> Northshed</span>
+    <span class="text-black dark:text-white"> Aerial Solutions.</span>
+  </a>
+  <ThemeToggle />
+  <!-- <nav>
     <ul class="flex list-none items-center gap-2 p-0 sm:gap-3">
       {
         Object.keys(NAV_LINKS).map((navItemKey) => {
@@ -24,5 +24,5 @@ import { NAV_LINKS, SITE } from "@/siteConfig.ts";
         })
       }
     </ul>
-  </nav>
+  </nav> -->
 </header>
