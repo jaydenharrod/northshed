@@ -18,14 +18,14 @@ export const NAV_LINKS: NavigationLinks = {};
 export const SOCIAL_LINKS: SocialLinks = {
   email: {
     label: "Email",
-    href: "mailto:contact@northshed.com.au",
+    href: "mailto:jayden@northshed.com.au",
   },
   instagram: {
     label: "Instagram",
-    href: "https://instagram.com/",
+    href: "https://instagram.com/northshed",
   },
   facebook: {
     label: "Facebook",
-    href: "https://facebook.com/",
+    href: "https://facebook.com/northshed",
   },
 };
