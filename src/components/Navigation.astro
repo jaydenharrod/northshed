@@ -1,28 +1,70 @@
----
-import ThemeToggle from "./ThemeToggle.astro";
----
-
 <header
-  class="mx-auto mb-8 flex max-w-screen-sm flex-wrap items-end justify-center gap-4 p-3 pb-8 font-sans sm:justify-between sm:p-6"
+  x-data="{ open: false }"
+  class="mx-auto flex max-w-screen-sm flex-wrap items-center justify-between gap-4 p-4 font-sans sm:max-w-screen-xl sm:p-6"
 >
-  <a href="/" class="text-lg font-black sm:text-xl">
-    <span class="text-gumleaf dark:text-gumleaf"> Northshed</span>
-    <span class="text-black dark:text-white"> Aerial Solutions.</span>
+  <a href="/" class="text-3xl font-black sm:text-4xl">
+    <span class="text-white hover:text-gray-300">Northshed</span>
   </a>
-  <ThemeToggle />
-  <!-- <nav>
-    <ul class="flex list-none items-center gap-2 p-0 sm:gap-3">
-      {
-        Object.keys(NAV_LINKS).map((navItemKey) => {
-          return (
-            <li>
-              <a href={NAV_LINKS[navItemKey].path} class="prose">
-                {NAV_LINKS[navItemKey].label}
-              </a>
-            </li>
-          );
-        })
-      }
-    </ul>
-  </nav> -->
+
+  <!-- Hamburger button (visible on mobile) -->
+  <button
+    @click="open = !open"
+    class="flex cursor-pointer items-center rounded border border-white px-3 py-2 text-white sm:hidden"
+    aria-label="Toggle navigation"
+    :aria-expanded="open"
+  >
+    <svg
+      class="h-6 w-6"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      viewBox="0 0 24 24"
+    >
+      <path
+        x-show="!open"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M4 6h16M4 12h16M4 18h16"></path>
+      <path
+        x-show="open"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M6 18L18 6M6 6l12 12"></path>
+    </svg>
+  </button>
+
+  <!-- Navigation menu -->
+  <nav
+    class="border-ironbark fixed top-20 right-0 left-0 z-50 flex flex-col items-center gap-8 rounded-none border-2 bg-black/70 px-6 py-4 text-lg text-white shadow-2xl backdrop-blur-xl transition-all duration-300 sm:visible sm:static sm:w-auto sm:flex-row sm:rounded-2xl sm:border-none sm:bg-transparent sm:opacity-100"
+    :class="{'flex': open, 'hidden': !open, 'sm:flex': true}"
+    x-cloak
+  >
+    <a href="/" class="hover:text-gray-300 hover:underline">Home</a>
+    <a href="/about" class="hover:text-gray-300 hover:underline">About</a>
+    <a href="/solutions" class="hover:text-gray-300 hover:underline"
+      >Solutions</a
+    >
+    <a href="/contact" class="hover:text-gray-300 hover:underline">Contact</a>
+  </nav>
+
+  <div class="hidden sm:block">
+    <a
+      href="/contact"
+      class="bg-gumleaf hover:bg-dusty flex gap-2 rounded-xl px-8 py-4 text-center text-lg font-bold text-white shadow-lg"
+    >
+      <span>Book Now</span>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        fill="currentColor"
+        viewBox="0 0 256 256"
+        ><path
+          d="M189.66,66.34a8,8,0,0,0-11.32,0L148.69,96H107.31L77.66,66.34A8,8,0,0,0,66.34,77.66L96,107.31v41.38L66.34,178.34a8,8,0,0,0,11.32,11.32L107.31,160h41.38l29.65,29.66a8,8,0,0,0,11.32-11.32L160,148.69V107.31l29.66-29.65A8,8,0,0,0,189.66,66.34ZM112,112h32v32H112Zm26.51-50.67a44,44,0,1,1,56.16,56.16A7.86,7.86,0,0,1,192,118a8,8,0,0,1-2.67-15.54,28,28,0,1,0-35.74-35.74,8,8,0,1,1-15.08-5.34ZM224,180a44,44,0,0,1-85.49,14.67,8,8,0,0,1,15.08-5.34,28,28,0,1,0,35.74-35.74,8,8,0,0,1,5.34-15.08A44.07,44.07,0,0,1,224,180ZM117.49,194.67a44,44,0,1,1-56.16-56.16,8,8,0,0,1,5.34,15.08,28,28,0,1,0,35.74,35.74,8,8,0,0,1,15.08,5.34ZM32,76a44,44,0,0,1,85.49-14.67,8,8,0,1,1-15.08,5.34,28,28,0,1,0-35.74,35.74A8,8,0,0,1,64,118a7.86,7.86,0,0,1-2.67-.46A44.07,44.07,0,0,1,32,76Z"
+        ></path></svg
+      >
+    </a>
+  </div>
 </header>
+
+<script src="//unpkg.com/alpinejs" defer></script>

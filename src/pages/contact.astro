@@ -2,10 +2,16 @@
 import BaseLayout from "@/layouts/BaseLayout.astro";
 
 import SeoPage from "@/components/SeoPage.astro";
+import Why from "@/components/Why.astro";
 import HeroAlt from "@/components/HeroAlt.astro";
+import ContactForm from "@/components/ContactForm.astro";
 ---
 
 <BaseLayout>
   <SeoPage slot="head" />
-  <HeroAlt title="404 Not Found" />
+  <div>
+    <HeroAlt title="Contact" />
+    <ContactForm />
+    <Why />
+  </div>
 </BaseLayout>

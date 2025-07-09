@@ -3,34 +3,14 @@
 @variant dark (&:where(.dark, .dark *));
 
 :root {
+  --font-sans: 'Figtree', ui-sans-serif, system-ui, sans-serif;
+  font-family: 'Figtree', ui-sans-serif, system-ui, sans-serif;
   color-scheme: light dark;
-  --color-primary: #4E3B31;   /* Ironbark */
-  --color-accent: #8FAE82;    /* Gumleaf */
-  --color-bg: #DAD2C5;        /* Dusty Beige */
+  --color-primary: #302722;   /* Ironbark */
+  --color-accent: #7ca16c;    /* Gumleaf */
+  --color-bg: #80888f;        /* Dusty Beige */
   --color-muted: #99a4ad;     /* Sky Grey */
   --color-text: #1C1C1C;      /* Charcoal */
-}
-.dark {
-  color-scheme: dark;
-  --color-primary: #DAD2C5;
-  --color-accent: #8FAE82;
-  --color-bg: #1C1C1C;
-  --color-muted: #4E3B31;
-  --color-text: #F1F1F1;
-}
-.light {
-  color-scheme: light;
-}
-
-@variant dark {
-  &:where(.dark, .dark *) {
-    @slot;
-  }
-  @media (prefers-color-scheme: dark) {
-    &:where(.system, .system *) {
-      @slot;
-    }
-  }
 }
 
 @theme {

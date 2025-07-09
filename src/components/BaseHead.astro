@@ -36,6 +36,12 @@ import Favicons from "@/components/Favicons.astro";
     title={SITE.title}
     href={new URL("rss.xml", Astro.site)}
   />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700&display=swap"
+    rel="stylesheet"
+  />
 
   <ClientRouter />
   <Favicons />

@@ -1,13 +1,15 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
 
-import Introduction from "@/components/Introduction.astro";
 import SeoPage from "@/components/SeoPage.astro";
+import Hero from "@/components/Hero.astro";
+import Commitment from "@/components/Commitment.astro";
 ---
 
 <BaseLayout>
   <SeoPage slot="head" />
   <div>
-    <Introduction />
+    <Hero />
+    <Commitment />
   </div>
 </BaseLayout>

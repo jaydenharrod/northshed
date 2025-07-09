@@ -1,11 +1,14 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
-
 import SeoPage from "@/components/SeoPage.astro";
 import HeroAlt from "@/components/HeroAlt.astro";
+import History from "@/components/History.astro";
 ---
 
 <BaseLayout>
   <SeoPage slot="head" />
-  <HeroAlt title="404 Not Found" />
+  <div>
+    <HeroAlt title="About" />
+    <History />
+  </div>
 </BaseLayout>

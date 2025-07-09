@@ -5,9 +5,9 @@ import type {
 } from "@/types.ts";
 
 export const SITE: SiteConfiguration = {
-  title: "Northshed Aerial Solutions – Regional NSW Drone Solutions",
+  title: "Northshed Aerial Solutions – Regional NSW Drone Operator",
   description:
-    "Northshed provides drone solutions for agriculture, construction, insurance, and property management across the Hunter and New England regions of NSW. Certified, insured, and locally operated.",
+    "Certified ReOC & RePL drone operator providing an aerial perspective with drone technology. Servicing NSW with drone-based visual inspections, damage assessments, progress reports, and media needs.",
   href: "https://northshed.com.au",
   author: "Telemetry Works",
   locale: "en-AU",
