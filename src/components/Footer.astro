@@ -1,5 +1,5 @@
 ---
-import { SITE } from "@/siteConfig";
+import { PARENT_URL, SITE, SOCIAL_LINKS } from "@/siteConfig";
 
 const year = new Date().getFullYear();
 ---
@@ -14,10 +14,7 @@ const year = new Date().getFullYear();
       <h4 class="text-xl font-semibold">Northshed Aerial Solutions</h4>
       <p>Fast field-ready drone services</p>
       <span class="text-dusty my-2 flex gap-2">
-        <a
-          href="https://www.instagram.com/northshed/?source=website_footer"
-          target="_blank"
-        >
+        <a href={SOCIAL_LINKS.instagram.href} target="_blank">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="32"
@@ -29,10 +26,7 @@ const year = new Date().getFullYear();
             ></path></svg
           >
         </a>
-        <a
-          href="https://www.facebook.com/northshed/?source=website_footer"
-          target="_blank"
-        >
+        <a href={SOCIAL_LINKS.facebook.href} target="_blank">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="32"
@@ -44,10 +38,7 @@ const year = new Date().getFullYear();
             ></path></svg
           >
         </a>
-        <a
-          href="https://www.linkedin.com/company/telemetryworks/?source=website_footer"
-          target="_blank"
-        >
+        <a href={SOCIAL_LINKS.linkedin.href} target="_blank">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="32"
@@ -67,7 +58,7 @@ const year = new Date().getFullYear();
     >
       <span class="prose block text-base"
         >© {year} – Northshed Aerial Solutions by
-        <a class="link" href="https://telemetryworks.com">{SITE.author}</a
+        <a class="link" target="_blank" href={PARENT_URL}>{SITE.author}</a
         ></span
       >
       <nav class="flex gap-8 text-base font-normal">

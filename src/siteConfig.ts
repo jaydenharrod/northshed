@@ -1,17 +1,19 @@
 import type {
-  SiteConfiguration,
   NavigationLinks,
+  SiteConfiguration,
   SocialLinks,
 } from "@/types.ts";
 
 export const SITE: SiteConfiguration = {
-  title: "Northshed Aerial Solutions – Regional NSW Drone Operator",
+  title: "Northshed Aerial Solutions – Hunter Valley Drone Operator",
   description:
-    "Certified ReOC & RePL drone operator providing an aerial perspective with drone technology. Servicing NSW with drone-based visual inspections, damage assessments, progress reports, and media needs.",
+    "Northshed Aerial Solutions is a professional drone operator based in the Hunter Valley, Australia. We provide high-quality aerial photography and videography services for various industries.",
   href: "https://northshed.com.au",
-  author: "Telemetry Works",
+  author: "Twellve",
   locale: "en-AU",
 };
+
+export const PARENT_URL = "https://twellve.com?source=northshed";
 
 export const NAV_LINKS: NavigationLinks = {};
 
@@ -22,10 +24,14 @@ export const SOCIAL_LINKS: SocialLinks = {
   },
   instagram: {
     label: "Instagram",
-    href: "https://instagram.com/northshed",
+    href: "https://instagram.com/northshed?source=website",
   },
   facebook: {
     label: "Facebook",
-    href: "https://facebook.com/northshed",
+    href: "https://facebook.com/northshed?source=website",
+  },
+  linkedin: {
+    label: "LinkedIn",
+    href: "https://linkedin.com/company/northshed?source=website",
   },
 };
