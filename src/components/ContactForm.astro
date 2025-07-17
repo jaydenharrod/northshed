@@ -1,55 +1,22 @@
+---
+import { SOCIAL_LINKS } from "@/siteConfig";
+---
+
 <div
-  class="flex w-full flex-col items-center justify-center bg-white px-4 py-6 md:flex-row md:py-32"
+  class="flex w-full flex-col items-center justify-center border-b-2 border-gray-100 bg-white px-4 py-6 text-center md:flex-row md:py-32"
 >
   <div class="max-w-lg flex-1 md:mr-12 md:mb-0">
-    <h1 class="mb-6 text-5xl font-bold text-black">From Drone To Data</h1>
+    <h1 class="mb-6 text-5xl font-bold text-black">Drone, Data, Done</h1>
     <p class="mb-8 text-lg text-black">
       Let us know how we can assist you with your aerial data needs. One-off
-      projects, ongoing work, or just a curious chat.
+      projects, recurring flights, or just a curious chat.
     </p>
-  </div>
-  <div class="bg-ironbark max-w-md flex-1 rounded-2xl p-8 shadow-lg">
-    <h2 class="mb-6 text-center text-2xl font-medium text-white">
-      Gain an aerial perspective
-    </h2>
-    <form class="space-y-4">
-      <input
-        type="text"
-        placeholder="John Smith"
-        class="w-full rounded-md bg-white px-4 py-3 text-black placeholder-gray-400 transition focus:ring-2 focus:ring-[#a3b98b] focus:outline-none"
-        required
-        disabled
-      />
-      <input
-        type="email"
-        placeholder="john@northshed.com.au"
-        class="w-full rounded-md bg-white px-4 py-3 text-black placeholder-gray-400 transition focus:ring-2 focus:ring-[#a3b98b] focus:outline-none"
-        required
-        disabled
-      />
-      <select
-        class="w-full rounded-md bg-white px-4 py-3 text-black placeholder-gray-400 transition focus:ring-2 focus:ring-[#a3b98b] focus:outline-none"
-        required
-        disabled
-      >
-        <option value="" disabled selected>Select your service...</option>
-        <option value="aerial-photography">Aerial Photography</option>
-        <option value="mapping">Mapping & Survey</option>
-        <option value="inspection">Inspection</option>
-        <option value="other">Other</option>
-      </select>
-      <textarea
-        placeholder="Describe your requirements in as much detail as possible."
-        class="min-h-[100px] w-full resize-none rounded-md bg-white px-4 py-3 text-black placeholder-gray-400 transition focus:ring-2 focus:ring-[#a3b98b] focus:outline-none"
-        required
-        disabled></textarea>
-      <button
-        type="submit"
-        disabled
-        class="bg-gumleaf hover:bg-dusty mt-2 w-full cursor-not-allowed rounded-md py-3 font-semibold text-white transition"
-      >
-        Contact form coming soon. <br />DM us on Facebook or Instagram.
-      </button>
-    </form>
+    <a
+      href={SOCIAL_LINKS.facebook.href}
+      target="_blank"
+      class="mb-8 text-lg text-black underline"
+    >
+      For now, please contact us via our Facebook DMs.
+    </a>
   </div>
 </div>
