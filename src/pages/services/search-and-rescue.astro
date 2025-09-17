@@ -1,0 +1,22 @@
+---
+import HeroAlt from "@/components/HeroAlt.astro";
+import SeoPage from "@/components/SeoPage.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+---
+
+<BaseLayout>
+  <SeoPage slot="head" />
+  <div>
+    <HeroAlt title="Search and Rescue" />
+    <div class="mx-auto max-w-5xl px-6 py-6 md:px-0 md:py-12">
+      <p class="mb-6 text-black">
+        <a href="/services" class="underline">Services</a> / Search and Rescue
+      </p>
+      <h2 class="mb-6 text-3xl leading-tight font-bold text-black md:text-4xl">
+        Search and Rescue
+      </h2>
+      <p class="mb-6 text-lg text-gray-700">TBA</p>
+      <p class="mb-30 text-lg text-gray-700">TBA</p>
+    </div>
+  </div>
+</BaseLayout>
