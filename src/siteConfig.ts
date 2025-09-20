@@ -5,9 +5,9 @@ import type {
 } from "@/types.ts";
 
 export const SITE: SiteConfiguration = {
-  title: "Northshed Aerial Solutions – Hunter Valley Drone Operator",
+  title: "Northshed Aerial Solutions – Hunter NSW Drone Operator",
   description:
-    "Northshed Aerial Solutions is a professional drone operator based in the Hunter Valley, Australia. We provide high-quality aerial photography and videography services for various industries.",
+    "Northshed Aerial Solutions is a professional drone operator based in the Hunter NSW region. We provide high-quality aerial photography and videography services for various industries.",
   href: "https://northshed.com.au",
   author: "Twellve",
   locale: "en-AU",
