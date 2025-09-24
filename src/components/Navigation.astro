@@ -6,44 +6,6 @@
     <span class="text-white hover:text-gray-300">Northshed</span>
   </a>
 
-  <!-- Hamburger button (visible on mobile) -->
-  <button
-    @click="open = !open"
-    class="flex cursor-pointer items-center rounded border border-white px-3 py-2 text-white sm:hidden"
-    aria-label="Toggle navigation"
-    :aria-expanded="open"
-  >
-    <svg
-      class="h-6 w-6"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="2"
-      viewBox="0 0 24 24"
-    >
-      <path
-        x-show="!open"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        d="M4 6h16M4 12h16M4 18h16"></path>
-      <path
-        x-show="open"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        d="M6 18L18 6M6 6l12 12"></path>
-    </svg>
-  </button>
-
-  <!-- Navigation menu -->
-  <nav
-    class="border-ironbark fixed top-20 right-0 left-0 z-50 flex flex-col items-center gap-8 rounded-none border-2 bg-black/70 px-6 py-4 text-lg text-white shadow-2xl backdrop-blur-xl transition-all duration-300 sm:visible sm:static sm:w-auto sm:flex-row sm:rounded-2xl sm:border-none sm:bg-transparent sm:opacity-100"
-    :class="{'flex': open, 'hidden': !open, 'sm:flex': true}"
-    x-cloak
-  >
-    <a href="/" class="hover:text-gray-300 hover:underline">Home</a>
-    <a href="/services" class="hover:text-gray-300 hover:underline">Services</a>
-    <a href="/contact" class="hover:text-gray-300 hover:underline">Contact</a>
-  </nav>
-
   <div class="hidden sm:block">
     <a
       href="/contact"

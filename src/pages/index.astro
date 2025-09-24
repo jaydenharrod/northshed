@@ -3,8 +3,8 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 
 import SeoPage from "@/components/SeoPage.astro";
 import Hero from "@/components/Hero.astro";
-import Packages from "@/components/Packages.astro";
 import AboutUs from "@/components/AboutUs.astro";
+import Services from "@/components/Services.astro";
 ---
 
 <BaseLayout>
@@ -12,6 +12,15 @@ import AboutUs from "@/components/AboutUs.astro";
   <div>
     <Hero />
     <AboutUs />
-    <Packages />
+    <div class="mx-auto mt-16 mb-16 max-w-5xl px-6 py-6 md:py-12">
+      <h2 class="mb-6 text-3xl leading-tight font-bold text-black md:text-4xl">
+        Commerical Drone Services
+      </h2>
+      <p class="mb-12 text-lg text-gray-700">
+        Northshed provides a range of drone solutions tailored to meet the
+        unique needs of our clients across NSW.
+      </p>
+      <Services />
+    </div>
   </div>
 </BaseLayout>
